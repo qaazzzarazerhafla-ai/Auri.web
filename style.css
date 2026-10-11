@@ -1,0 +1,259 @@
+/* ====== Reset dasar ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f4f4;
+  color: #1a1a1a;
+}
+
+/* Bingkai agar tampilan selalu terlihat seperti aplikasi mobile,
+   meski dibuka di layar komputer */
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* ====== 1. HEADER ====== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.icon-btn {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ====== 2. CAROUSEL ====== */
+.carousel {
+  position: relative;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dot.active {
+  background: #ffffff;
+}
+
+/* ====== 3. CAPTION BAR ====== */
+.caption-bar {
+  background: #3a3a3a;
+  color: #fff;
+  padding: 14px 20px;
+}
+
+.species-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.species-name em {
+  font-style: italic;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.species-credit {
+  font-size: 0.85rem;
+  color: #d0d0d0;
+  margin-top: 4px;
+}
+
+/* ====== 4 & 5. KATEGORI (Vertebrata / Invertebrata) ====== */
+.category-section {
+  padding: 18px 20px 4px;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.dot-sep {
+  color: #999;
+  font-weight: 400;
+  margin: 0 2px;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px 8px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #1c2a6b; /* biru tua seperti contoh */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.icon-label {
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+/* ====== 6. KARTU PROMO (Auriddle + Kebun/Museum/Koleksi) ====== */
+.promo-card {
+  margin: 20px 20px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.promo-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.promo-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #1c2a6b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.promo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+}
+
+.promo-text strong {
+  font-size: 0.95rem;
+}
+
+.promo-right {
+  display: flex;
+  gap: 14px;
+}
+
+.promo-mini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.mini-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.mini-green { background: #2e8b47; }
+.mini-gray  { background: #4a4a4a; }
+.mini-blue  { background: #2a8fd8; }
+
+/* ====== 7. BERITA ====== */
+.news-section {
+  padding: 4px 20px 30px;
+}
+
+.news-card {
+  position: relative;
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 150px;
+}
+
+.news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+}
+
+.news-date {
+  color: #fff;
+  font-style: italic;
+  font-size: 1rem;
+}
